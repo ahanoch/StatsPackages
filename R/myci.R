@@ -8,6 +8,9 @@
 #' @examples
 #' myci(x = rnorm(30,mean=10,sd=12))
 myci=function(x){
+
+  n=length(x)
+
   conf_Int = 95
   alpha = 1 - conf_Int/100
   t=qt(1-alpha/2,n-1)
